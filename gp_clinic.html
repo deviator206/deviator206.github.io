@@ -24,7 +24,8 @@
    <!-- script
    ================================================== -->   
 	<script src="js/modernizr.js"></script>
-	<script src="js/pace.min.js"></script>
+    <script src="js/pace.min.js"></script>
+    <script  src="js/jspdf.min.js"></script>
 
    <!-- favicons
 	================================================== -->
@@ -34,6 +35,15 @@
 
 <body id="top">
 <h1>  TEST 1</h1>
+
+<script>
+window.onload = function(){
+    var doc = new jsPDF()
+
+doc.text('Hello world!', 10, 10)
+doc.save('a4.pdf')
+}
+</script>
     </body>
 
     </html>
